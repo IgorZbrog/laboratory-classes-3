@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= headTitle %></title>
+  </head>
+  <body>
+    <%- include('partials/navigation', { 
+      menuLinks: [
+        { href: '/', label: 'Home' }
+      ], 
+      activeLinkPath: null 
+    }) %>
+
+    <h1>404 - Not Found</h1>
+    <p>Page not found.</p>
+  </body>
+</html>
