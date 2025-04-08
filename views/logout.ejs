@@ -1,11 +1,16 @@
-<html>
-  <head>
-    <title>Shop - Logout</title>
-  </head>
-  <body>
-    <h1>Logout</h1>
-    <nav>
-      <a href="/">Home</a><br /><a href="/kill">Logout from application</a>
-    </nav>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= headTitle %></title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <%- include('partials/navigation', { menuLinks, activeLinkPath }) %>
+  
+  <main>
+    <h1 class="heading">Are you sure you want to logout?</h1>
+  </main>
+</body>
 </html>

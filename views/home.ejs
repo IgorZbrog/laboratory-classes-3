@@ -1,15 +1,16 @@
-<html>
-  <head>
-    <title>Shop - Home</title>
-  </head>
-  <body>
-    <h1>Home</h1>
-    <nav>
-      <a href="/product/add">Add product</a>
-      <br />
-      <a href="/product/new">Newest product</a>
-      <br />
-      <a href="/logout">Logout</a>
-    </nav>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= headTitle %></title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <%- include('partials/navigation', { menuLinks, activeLinkPath }) %>
+  
+  <main>
+    <h1 class="heading">Welcome to our shop!</h1>
+  </main>
+</body>
 </html>

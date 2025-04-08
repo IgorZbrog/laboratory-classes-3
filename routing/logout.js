@@ -1,13 +1,13 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const { LOGOUT_LINKS } = require("../constants/navigation"); 
+const { LOGOUT_LINKS } = require('../constants/navigation');
 
-router.get("/", (req, res) => {
-  res.render("logout", {  
-    headTitle: "Shop - Logout",      
-    path: "/logout",                  
-    menuLinks: LOGOUT_LINKS,         
-    activeLinkPath: "/logout"      
+router.get('/', (req, res) => {
+  res.render('logout', {
+    headTitle: 'Logout',
+    path: '/kill',
+    menuLinks: LOGOUT_LINKS,
+    activeLinkPath: '/kill'
   });
 });
 

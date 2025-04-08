@@ -1,34 +1,30 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Shop - Add product</title>
-  </head>
-  <body>
-    <%- include('partials/navigation', { 
-      menuLinks: [
-        { href: '/', label: 'Home' },
-        { href: '/products/new', label: 'Newest product' },
-        { href: '/logout', label: 'Logout' }
-      ], 
-      activeLinkPath: '/products/add' 
-    }) %>
-
-    <h1>Add product</h1>
-    <form action="/products/add" method="POST">
-      <br />
-      <label>
-        Name
-        <br />
-        <input type="text" name="name" required />
-      </label>
-      <br />
-      <label>
-        Description
-        <br />
-        <input type="text" name="description" required />
-      </label>
-      <br />
-      <button type="submit">Add</button>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= headTitle %></title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <%- include('partials/navigation', { menuLinks, activeLinkPath }) %>
+  
+  <main>
+    <h1 class="heading">Add Product</h1>
+    
+    <form class="form" action="/products/add" method="POST">
+      <div class="form__group">
+        <label class="form__label">Product Name</label>
+        <input class="form__input" type="text" name="name" required>
+      </div>
+      
+      <div class="form__group">
+        <label class="form__label">Description</label>
+        <input class="form__input" type="text" name="description" required>
+      </div>
+      
+      <button class="button" type="submit">Add Product</button>
     </form>
-  </body>
+  </main>
+</body>
 </html>

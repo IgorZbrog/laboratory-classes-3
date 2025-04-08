@@ -1,6 +1,6 @@
 const productsSlice = {
-    newestProduct: [],
+    newestProduct: null,
     products: []
-};
-
-moldule.exports=productsSlice;
+  };
+  
+  module.exports = productsSlice;

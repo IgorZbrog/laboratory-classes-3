@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title><%= headTitle %></title>
-    <link rel="stylesheet" href="/css/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= headTitle %></title>
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <%- include('partials/navigation', { menuLinks: menuLinks, activeLinkPath: activeLinkPath }) %>
-    <main>
-        <h1 class="heading">Products</h1>
-
-        <% if (products && products.length > 0) { %>
-            <ul>
-                <% products.forEach(product => { %>
-                    <li>
-                        Name: <%= product.name %>,
-                        Description: <%= product.description %>
-                    </li>
-                <% }); %>
-            </ul>
-        <% } else { %>
-            <div>No products available.</div>
-        <% } %>
-    </main>
+  <%- include('partials/navigation', { menuLinks, activeLinkPath }) %>
+  
+  <main>
+    <h1 class="heading">Products</h1>
+    
+    <% if (products.length > 0) { %>
+      <ul>
+        <% products.forEach(function(product) { %>
+          <li>Name: <%= product.name %>, Description: <%= product.description %></li>
+        <% }); %>
+      </ul>
+    <% } else { %>
+      <div>No products available.</div>
+    <% } %>
+  </main>
 </body>
 </html>

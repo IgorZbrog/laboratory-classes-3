@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= headTitle %></title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <%- include('partials/navigation', { menuLinks, activeLinkPath }) %>
+  
+  <main>
+    <h1 class="heading">Newest Product</h1>
+    
+    <% if (newestProduct && newestProduct.name) { %>
+      <div>
+        <p>Name: <%= newestProduct.name %></p>
+        <p>Description: <%= newestProduct.description %></p>
+      </div>
+    <% } else { %>
+      <div>No data available</div>
+    <% } %>
+  </main>
+</body>
+</html>
